@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import { checkPassword } from './LoginScripts.js';
 import './App.css';
 
 function Login() {
+  const [passwordResponse, setPasswordResponse] = useState("");
+  const [passwordText, setPasswordText] = useState("");
+
+  const handleChange = (e) => {
+    setPasswordText(e.target.value);
+    if(value != null){
+    setPasswordResponse(checkPassword(passwordText).join("\n"));
+    }
+  }
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="Header">Beacon
       </header>
+      <text className='login-item text'>Username</text>
+      <input type='textbox' className='textbox'></input>
+      <text className='login-item text'>Password</text>
+      <input name='passwordText' type='textbox' className='textbox' onChange={handleChange}></input>
+      <text className='login-item text'>{passwordResponse}</text>
+      <button className='login-item button space'>Log In</button>
+      <button className='login-item button'>I want to use a trial account</button>
     </div>
   );
+
+
 }
 
 export default Login;
