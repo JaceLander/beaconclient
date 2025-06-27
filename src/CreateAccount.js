@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { checkPassword } from './LoginScripts.js';
+import { AnimatePresence, motion } from 'motion/react';
 import './App.css';
 
 function CreateAccount() {
@@ -37,7 +38,7 @@ function CreateAccount() {
 
   return (
     <div className="App">
-      <header className="Header outfit-title">Beacon.
+      <header className="Header outfit-title unselectable">Beacon.
       </header>
       {/* <text className='login-item text'>Username</text> */}
       <input type='textbox' className='textbox space outfit-text' placeholder='Username'></input>

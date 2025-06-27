@@ -7,12 +7,21 @@
   min-height: 100vh;
 }
 
+
+
 .text {
   flex-direction: column;
   justify-content: center;
   font-size: calc(20px);
   color: white;
   margin-bottom: 1%;
+}
+
+.unselectable {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Standard */
 }
 
 .login-item {
@@ -31,12 +40,16 @@
 .textbox{
   color:black;
   text-align: center;
-
+  outline: none;
 }
 
 .button{
   color:black;
   font-size: calc(15px);
+}
+
+.button:hover{
+  cursor: pointer;
 }
 
 .outfit-text {
@@ -52,6 +65,8 @@
   font-weight: 900;
   font-style:normal;
 }
+
+
 
 .password-space{
   min-height: 42px;
@@ -85,5 +100,10 @@ margin-bottom: 5%;
   color: rgb(21, 138, 0);
 }
 
+.small{
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-size: xx-small;
+}
 
 
