@@ -39,8 +39,22 @@
   font-size: calc(15px);
 }
 
+.outfit-text {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style:normal;
+}
+
+.outfit-title {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style:normal;
+}
+
 .password-space{
-  min-height: 36px;
+  min-height: 42px;
   }
 
 .space{

@@ -9,12 +9,16 @@ import CreateAccount from "./CreateAccount";
 
 export default function App() {
   return (
+
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
         <Route path="/createAccount" element={<CreateAccount />} />
       </Routes>
+      <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Outfit:wght@100..900&display=swap');
+      </style>
     </BrowserRouter>
   );
 }

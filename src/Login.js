@@ -21,13 +21,12 @@ function Login() {
 
   return (
     <div className="App">
-      <header className="Header">Beacon.
+      <header className="Header outfit-title">Beacon.
       </header>
-      <input type='textbox' className='textbox space' placeholder='username'></input>
-      <input name='passwordText' type='password' className='textbox pw-space' placeholder= 'password'onChange={handleChange}></input>
-      <button className='login-item button space space-top'>Log In</button>
-      <button className='login-item button space' onClick={() => navigate('/createAccount')}>Don't have an account?</button>
-      <button className='login-item button'>I want to use a trial account</button>
+      <input type='textbox' className='textbox space outfit-text' placeholder='Username'></input>
+      <input name='passwordText' type='password' className='textbox space outfit-text' placeholder= 'Password'onChange={handleChange}></input>
+      <button className='login-item button space outfit-text' onClick={() => navigate('/createAccount')}>Don't have an account?</button>
+      <button className='login-item button space  outfit-text'>I want to use a trial account</button>
 
     
     </div>

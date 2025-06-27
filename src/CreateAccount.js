@@ -6,6 +6,7 @@ function CreateAccount() {
   const [passwordResponse, setPasswordResponse] = useState("");
   const [password2Response, setPassword2Response] = useState("");
   const [password, setPassword] = useState("");
+  const [color, setColor] = useState('rgb(0, 0, 0)');
 
 
   const handleChange = (e) => {
@@ -24,25 +25,28 @@ function CreateAccount() {
     setPasswordResponse('');
     }
     if(EnteredPassword === password){
-
+      setPassword2Response("Passwords match!");
+      setColor('rgb(21, 138, 0)');
     }else{
     setPassword2Response("Passwords must be the same");
+    setColor('rgb(195, 0, 0)');
+
     }
   }
 
 
   return (
     <div className="App">
-      <header className="Header">Beacon.
+      <header className="Header outfit-title">Beacon.
       </header>
       {/* <text className='login-item text'>Username</text> */}
-      <input type='textbox' className='textbox space' placeholder='username'></input>
+      <input type='textbox' className='textbox space outfit-text' placeholder='Username'></input>
       {/* <text className='login-item text'>Password</text> */}
-      <input type='password' className='textbox pw-space' placeholder= 'password'onChange={handleChange}></input>
-      <div className='response password-space'>{passwordResponse}</div>
-      <input type='password' className='textbox pw-space' placeholder= 'Re-enter password'onChange={handleChangePW}></input>
-      <div className='response password-space'>{password2Response}</div>
-      <button className='login-item button space space-top'>Create Account</button>
+      <input type='password' className='textbox pw-space outfit-text' placeholder= 'Password'onChange={handleChange}></input>
+      <div className='response password-space outfit-text'>{passwordResponse}</div>
+      <input type='password' className='textbox pw-space outfit-text' placeholder= 'Re-enter Password'onChange={handleChangePW}></input>
+      <div className='response password-space' style={{color: color}}>{password2Response}</div>
+      <button className='login-item button space space-top outfit-text'>Create Account</button>
     </div>
   );
 
