@@ -1,9 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './index.css';
-import App from './Login';
+//import App from './Login';
 import reportWebVitals from './reportWebVitals';
+import Login from "./Login";
+import CreateAccount from "./CreateAccount";
 
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/createAccount" element={<CreateAccount />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
