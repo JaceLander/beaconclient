@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { checkPassword } from './LoginScripts.js';
+import { checkPassword, checkUsername} from './LoginScripts.js';
 import './App.css';
 import { useNavigate } from 'react-router-dom';
 

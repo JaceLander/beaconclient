@@ -1,5 +1,5 @@
 import './App.css';
-
+import axios from 'axios';
 
 function checkPassword(passwordString){
     
@@ -39,4 +39,18 @@ function checkPassword(passwordString){
     return responseDivs;
 }
 
-export {checkPassword};
+async function checkUsername(username){
+    try{
+var response = await axios.get("https://localhost:8080/user/search/${username}", {
+    headers: {
+      "X-API-KEY": "my-secret-key-123"
+    }});
+return response.includes(username);
+    }
+    catch (error) {
+        console.log(error);
+    }
+}
+
+
+export {checkPassword, checkUsername};
