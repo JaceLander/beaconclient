@@ -1,0 +1,108 @@
+.Login {
+    background: #001f6e;
+    background: linear-gradient(360deg,rgba(0, 31, 110, 1) 0%, rgba(130, 130, 191, 1) 99%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    z-index: -1;
+  }
+
+  .background{
+    height: 120vh;
+    z-index: -2;
+    object-fit: cover;
+    display: block;
+    width: 55vw;
+    transform:translateY(-50px);
+  }
+
+  .ImageWrapper{
+    z-index: 0;
+    overflow: hidden;
+    position: absolute;
+    justify-content: center;
+    justify-self: center;
+    --p: 82px; /* control the shape (can be percentage) */
+    clip-path: polygon(var(--p) 0,100% 0,calc(100% - var(--p)) 100%,0 100%);
+    inset: 0;
+
+  }
+
+  .InsetShadow {
+    max-width: 55vw;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 200%;
+    pointer-events: none;
+    box-shadow: inset -40px -60px 30px 60px rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    transform:translateY(-100px);
+    transform: skewX(-6.5deg);
+
+  }
+
+  .LoginResponseContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+.response{
+    display: flex;
+    flex-direction: column;
+  
+}
+
+.buttons{
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+    width: 100%;
+}
+
+.Header {
+    font-size: calc(60px);
+    color: white;
+    margin-bottom: 2%;
+    z-index: 1;
+  }
+
+.textbox{
+    width: 100%;
+    color:black;
+    text-align: center;
+    outline: none;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: white;
+    border: 1.5px solid rgb(63, 63, 63);
+    background-color: rgba(116, 116, 116, 0.45);
+}
+.textbox::placeholder {
+    color: rgba(208, 208, 208, 0.35);
+  }
+
+
+
+.label{
+    align-self: flex-start;
+    color: #ffffff;
+    margin-left: 5px;
+}
+      
+.login-item {
+
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: "Outfit", sans-serif;
+    border: none;
+}

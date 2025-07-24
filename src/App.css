@@ -1,18 +1,10 @@
-.App {
-  background-color: rgb(17, 32, 62);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  min-height: 100vh;
-}
+
 
 
 
 .text {
   flex-direction: column;
   justify-content: center;
-  font-size: calc(20px);
   color: white;
   margin-bottom: 1%;
 }
@@ -24,33 +16,21 @@
   user-select: none; /* Standard */
 }
 
-.login-item {
-  flex-direction: column;
-  justify-content: center;
-  color: white;
-}
 
 
-.Header {
-  font-size: calc(60px);
-  color: white;
-  margin-bottom: 5%;
-}
 
-.textbox{
-  color:black;
-  text-align: center;
-  outline: none;
-}
+
+
 
 .button{
   color:black;
-  font-size: calc(15px);
 }
 
 .button:hover{
   cursor: pointer;
 }
+
+
 
 .outfit-text {
   font-family: "Outfit", sans-serif;
@@ -68,28 +48,18 @@
 
 
 
-.password-space{
-  min-height: 42px;
-  }
 
 .space{
 margin-bottom: 5%;
 }
 
-.pw-space{
-  margin-bottom: 5px;
-}
+
 
 .space-top{
   margin-top: 5px;
   }
 
-.response{
-  font-size: calc(10px);
-  display: flex;
-  flex-direction: column;
 
-}
 
 .false{
   color: rgb(195, 0, 0);
@@ -103,7 +73,6 @@ margin-bottom: 5%;
 .small{
   margin-top: 1%;
   margin-bottom: 1%;
-  font-size: xx-small;
 }
 
 
