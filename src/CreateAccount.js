@@ -11,9 +11,11 @@ function CreateAccount() {
   const [password2Response, setPassword2Response] = useState("");
   const [password, setPassword] = useState("");
   const [usernameInput, setUsernameInput] = useState("");
+  const [pwValid, setPWValid] = useState(false);
   const [color, setColor] = useState('rgb(0, 0, 0)');
 
   async function createUser(){
+    if(pwValid === true){
     const user = {
       username: usernameInput,
       passwordHash: password
@@ -38,7 +40,7 @@ function CreateAccount() {
     })
     .then((data) => console.log("User created:", data))
     .catch((error) => console.error("Error creating user:", error.message));
-
+  } 
   }
 
   const handleChangeUserName = (e) => {
@@ -83,13 +85,22 @@ function CreateAccount() {
       <div className='LoginResponseContainer'>
           <label className='login-item label'>Create Account</label>
           <input type='textbox' className='textbox space outfit-text' 
-          placeholder='Username' onChange={handleChangeUserName}></input>
+          placeholder='Username'  onChange={handleChangeUserName}></input>
           <input type='password' className='textbox pw-space outfit-text' placeholder= 
-          'Password'onChange={handleChangePW}></input>
-          <div className='response password-space outfit-text'>{passwordResponse}</div>
-          <input type='password' className='textbox pw-space outfit-text' placeholder= 
-          'Re-enter Password'onChange={handleChangePW2}></input>
-          <div className='response password-space' style={{color: color}}>{password2Response}</div>
+          'Password' onChange={handleChangePW} style={{marginBottom:"2.5px"}}></input>
+          <div className='response password-space outfit-text' 
+          style={{fontSize:"7.5px", marginBottom:"10px"}}>
+          {passwordResponse}
+          </div>
+          <input type='password' 
+          className='textbox pw-space outfit-text' 
+          placeholder= 'Re-enter Password' 
+          style={{marginBottom:"2.5px"}} 
+          onChange={handleChangePW2}></input>
+          <div className='response password-space' 
+          style={{color: color, fontSize:"7.5px", marginBottom:"10px"}}>
+          {password2Response}
+          </div>
           <button className='login-item button space space-top outfit-text' 
           onClick={createUser}>Create Account</button>
        </div>

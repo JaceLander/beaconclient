@@ -89,7 +89,7 @@ async function checkUserPassword(){
             <input name='textbox' type='password' className='textbox space outfit-text' placeholder= 'Password' onChange={handlePWChange}></input>
             <button className='buttons login-item button space' style={{backgroundColor:"rgba(255, 255, 255, 1)"}} onClick={checkUserPassword}>Log In</button>
             <button className='buttons login-item button space' style={{backgroundColor:"rgba(89, 89, 89, .55)"}} onClick={() => navigate('/createAccount')}>Don't have an account?</button>
-            <button className='buttons login-item button space' style={{marginTop:'75px', marginBottom:'0px'}}>Log In As Guest</button>
+            <button className='buttons login-item button space' style={{marginTop:'15px', marginBottom:'0px'}}>Log In As Guest</button>
           </div>
           </div>
   );
