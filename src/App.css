@@ -17,7 +17,48 @@
 }
 
 
+.bottom-toolbar-contain{
+  bottom:0;
+  position:absolute;
+  display:flex;
+  flex-direction: column;
+  width: 100%;
+  transition: all .5s ease;
+  transform: translateY(35px);
+}
 
+.bottom-toolbar{
+  height:45px;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: rgba(0,0,0,.45);
+  width: 100%;
+
+}
+
+.arrow-tab{
+  background-color: rgba(0,0,0,.45);
+  height:10px;
+  width: 60px;
+  align-self: center;
+  border-radius: 10px 10px 0 0;
+  
+}
+
+.bottom-toolbar-contain:hover{
+  transform: translateY(0);
+}
+
+.icon{
+  height:25px;
+  margin: auto;
+  transition-duration: 1s ease;
+}
+
+.icon:hover{
+cursor: pointer;
+}
 
 
 

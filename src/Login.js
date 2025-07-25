@@ -46,9 +46,7 @@ async function checkUserPassword(){
   })
   .then((data) => console.log("User sucessfully logged in:", data))
   .catch((error) => console.error("Error verifying:", error.message));
-
-  alert(loginResponse);
-
+  navigate('/home');
 }
 
 

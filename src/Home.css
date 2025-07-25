@@ -1,0 +1,51 @@
+.Home{
+    background: #001f6e;
+    background: linear-gradient(360deg,rgba(0, 31, 110, 1) 0%, rgba(130, 130, 191, 1) 99%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.Barrier{
+    border: 1px solid rgba(0,0,0,0.25);
+    min-height: 50vh;
+}
+
+.font{
+    font-size: 12.5px;
+    font-family: "Outfit", sans-serif;
+    color: azure;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity .5s ease;
+    pointer-events: none;
+}
+
+.searchmodal{
+display: flex;
+flex-direction: column;
+height: 450px;
+width: calc(10vw + 150px);
+position: fixed;
+justify-self: center;
+align-self: center;
+background-color: azure;
+border-radius: 10px;
+}
+
+.textbox{
+    margin-top: 5px;
+    align-self: center;
+    color: black;
+    width: calc(5vw + 200px);
+    height: 30px;
+}
